@@ -4,7 +4,9 @@ import {
   Switch,
   Route
 } from "react-router-dom";
+import Checkout from "./components/Checkout/Checkout";
 import Home from "./components/Home/Home";
+import Login from "./components/Login/Login";
 import Navbar from "./components/Navbar/Navbar";
 
 function App() {
@@ -12,11 +14,11 @@ function App() {
     <Router>
       <Navbar></Navbar>
       <Switch>
-        <Route path="/about">
-          
+        <Route path="/login">
+          <Login></Login>
         </Route>
-        <Route path="/users">
-          
+        <Route path="/checkout">
+          <Checkout></Checkout>
         </Route>
         <Route path="/">
           <Home></Home>

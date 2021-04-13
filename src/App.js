@@ -8,6 +8,7 @@ import Checkout from "./components/Checkout/Checkout";
 import Home from "./components/Home/Home";
 import Login from "./components/Login/Login";
 import Navbar from "./components/Navbar/Navbar";
+import PrivateRoute from "./components/PrivateRoute/PrivateRoute";
 
 function App() {
   return (
@@ -17,9 +18,9 @@ function App() {
         <Route path="/login">
           <Login></Login>
         </Route>
-        <Route path="/checkout">
+        <PrivateRoute path="/checkout/:id">
           <Checkout></Checkout>
-        </Route>
+        </PrivateRoute>
         <Route path="/">
           <Home></Home>
         </Route>

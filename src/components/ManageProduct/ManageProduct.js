@@ -7,10 +7,10 @@ const ManageProduct = () => {
     const [allProducts, setAllProducts] = useState([]);
 
     useEffect(() => {
-        fetch('http://localhost:5000/products')
+        fetch('https://shielded-peak-13203.herokuapp.com/products')
         .then(response => response.json())
         .then(data => setAllProducts(data))
-    },[allProducts])
+    },[])
 
     return (
         

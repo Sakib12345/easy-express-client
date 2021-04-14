@@ -8,7 +8,7 @@ const ManageProductList = (props) => {
     const history = useHistory();
 
     const handleDelete = (e) => {
-        fetch(`http://localhost:5000/deleteProduct/${_id}`,{
+        fetch(`https://shielded-peak-13203.herokuapp.com/deleteProduct/${_id}`,{
             method: 'DELETE'
         })
         .then(response => response.json)

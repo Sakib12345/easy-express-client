@@ -6,10 +6,10 @@ const Home = () => {
 
     const [products, setProducts] = useState([]);
     useEffect(() =>{
-        fetch('http://localhost:5000/products')
+        fetch('https://shielded-peak-13203.herokuapp.com/products')
         .then(response => response.json())
         .then(data => setProducts(data))
-    }, [products])
+    }, [])
 
     // const all = () => {
     //     fetch('http://localhost:5000/addProducts', {

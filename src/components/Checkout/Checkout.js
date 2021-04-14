@@ -10,7 +10,7 @@ const Checkout = () => {
     const history = useHistory();
 
     useEffect(() => {
-        fetch(`http://localhost:5000/product/${id}`)
+        fetch(`https://shielded-peak-13203.herokuapp.com/product/${id}`)
         .then(response => response.json())
         .then(data => setProduct(data))
     },[id]);
@@ -26,7 +26,7 @@ const Checkout = () => {
     }
 
     const handleCheckOut = () =>{
-        fetch(`http://localhost:5000/addOrder`, {
+        fetch(`https://shielded-peak-13203.herokuapp.com/addOrder`, {
             method: 'POST',
             headers: {'Content-Type': 'application/json'},
             body: JSON.stringify(orderInfo)

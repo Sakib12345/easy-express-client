@@ -7,10 +7,10 @@ const Order = () => {
     const user = JSON.parse(localStorage.getItem('user')) || {};
 
     useEffect(() => {
-        fetch(`http://localhost:5000/orders?email=${user.email}`)
+        fetch(`https://shielded-peak-13203.herokuapp.com/orders?email=${user.email}`)
             .then(response => response.json())
             .then(data => setOrders(data))
-    }, [])
+    }, [user.email])
 
     return (
         <div className="container">

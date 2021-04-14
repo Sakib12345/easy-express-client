@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { useHistory } from 'react-router';
+import AdminTopBar from '../AdminTopBar/AdminTopBar';
 
 const AddProduct = () => {
 
@@ -27,11 +28,9 @@ const AddProduct = () => {
     }
 
     return (
-        <div className="container">
-            <div className="row">
-                
-            </div>
-            <div className="col-md-8">
+        <div>
+            <AdminTopBar></AdminTopBar>
+            <div className="container col-md-8">
                 <h2 className="m-5 text-center">Add Product</h2>
                 <form onSubmit={handleSubmit} >
                     <input className='form-control' onBlur={handleOnBlur} type="text" name="title" placeholder="Enter Name" required/><br/><br/>

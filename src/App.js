@@ -8,6 +8,7 @@ import AddProduct from "./components/AddProduct/AddProduct";
 import Checkout from "./components/Checkout/Checkout";
 import Home from "./components/Home/Home";
 import Login from "./components/Login/Login";
+import ManageProduct from "./components/ManageProduct/ManageProduct";
 import Navbar from "./components/Navbar/Navbar";
 import Order from "./components/Orders/Order";
 import PrivateRoute from "./components/PrivateRoute/PrivateRoute";
@@ -28,6 +29,9 @@ function App() {
         </PrivateRoute>
         <PrivateRoute path="/addProduct">
           <AddProduct></AddProduct>
+        </PrivateRoute>
+        <PrivateRoute path="/manageProduct">
+          <ManageProduct></ManageProduct>
         </PrivateRoute>
         <Route path="/">
           <Home></Home>

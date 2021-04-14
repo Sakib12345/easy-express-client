@@ -24,7 +24,7 @@ const Navbar = () => {
                             </Link>
                         </li>
                         <li className="nav-item me-5">
-                            <Link to="/">
+                            <Link to="/addProduct">
                                 <button className='btn btn-default'>Admin</button>
                             </Link>
                         </li>

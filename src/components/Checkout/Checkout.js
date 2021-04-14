@@ -1,11 +1,13 @@
 import React, { useEffect, useState } from 'react';
-import { useParams } from 'react-router';
+import { useHistory, useParams } from 'react-router';
 
 const Checkout = () => {
 
     const {id} = useParams();
     const user = JSON.parse(localStorage.getItem('user')) || {};
     const [product, setProduct] = useState({});
+
+    const history = useHistory();
 
     useEffect(() => {
         fetch(`http://localhost:5000/product/${id}`)
@@ -30,7 +32,10 @@ const Checkout = () => {
             body: JSON.stringify(orderInfo)
         })
         .then(response => response.json)
-        .then(data => console.log(data))
+        .then(data => {
+            alert('Thanks! Your order has been placed, Enjoy Shopping');
+            history.replace('/')
+        })
     }
 
     return (

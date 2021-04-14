@@ -4,7 +4,6 @@ import './Products.css'
 
 const Products = (props) => {
     const {_id, title, quantity, price, image } = props.product;
-    
     return (
         <div className="col-lg-4 col-md-6 mb-5 pb-5 mb-lg-0 ">
             <div className="card rounded shadow-sm border-0 cardDesign h-100">

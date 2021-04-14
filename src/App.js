@@ -4,10 +4,12 @@ import {
   Switch,
   Route
 } from "react-router-dom";
+import AddProduct from "./components/AddProduct/AddProduct";
 import Checkout from "./components/Checkout/Checkout";
 import Home from "./components/Home/Home";
 import Login from "./components/Login/Login";
 import Navbar from "./components/Navbar/Navbar";
+import Order from "./components/Orders/Order";
 import PrivateRoute from "./components/PrivateRoute/PrivateRoute";
 
 function App() {
@@ -20,6 +22,12 @@ function App() {
         </Route>
         <PrivateRoute path="/checkout/:id">
           <Checkout></Checkout>
+        </PrivateRoute>
+        <PrivateRoute path="/orders">
+          <Order></Order>
+        </PrivateRoute>
+        <PrivateRoute path="/addProduct">
+          <AddProduct></AddProduct>
         </PrivateRoute>
         <Route path="/">
           <Home></Home>

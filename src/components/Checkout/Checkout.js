@@ -4,7 +4,7 @@ import { useParams } from 'react-router';
 const Checkout = () => {
 
     const {id} = useParams();
-    
+    const user = JSON.parse(localStorage.getItem('user')) || {};
     const [product, setProduct] = useState({});
 
     useEffect(() => {
@@ -15,8 +15,25 @@ const Checkout = () => {
 
     const {title, quantity, price} = product;
 
+    const orderInfo = {
+        email: user.email,
+        date: new Date(),
+        title: title, 
+        quantity: quantity,
+        price: price
+    }
+
+    const handleCheckOut = () =>{
+        fetch(`http://localhost:5000/addOrder`, {
+            method: 'POST',
+            headers: {'Content-Type': 'application/json'},
+            body: JSON.stringify(orderInfo)
+        })
+        .then(response => response.json)
+        .then(data => console.log(data))
+    }
+
     return (
-        <div>
             <div className="container mt-5">
             <h2 className="mb-5">Checkout</h2>
             <table className="table">
@@ -39,7 +56,7 @@ const Checkout = () => {
                     </tr>
                 </tbody>
             </table>
-        </div>
+            <button onClick={handleCheckOut} className='btn btn-success'>Checkout</button>
         </div>
     );
 };

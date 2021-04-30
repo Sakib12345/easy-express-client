@@ -1,6 +1,6 @@
-Easy Express - A e-commerce web application.
+#Easy Express - A e-commerce web application.
 
-Features:
+#Features:
 
 •	Single page web application.
 
@@ -11,7 +11,7 @@ Features:
 •	Admin can upload and delete products.
 
 
-Live Link: https://easy-express-6971c.web.app/
+#Live Link: https://easy-express-6971c.web.app/
 
-Technologies: HTML, CSS, Bootstrap, React, Express,
+#Technologies: HTML, CSS, Bootstrap, React, Express,
 Mongodb, Heroku, Firebase.
